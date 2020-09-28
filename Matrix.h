@@ -28,4 +28,13 @@ namespace mx {
 		float* matrix;
 	};
 
+	class Vector : public Matrix
+	{
+	public:
+		Vector(int size);
+		Vector(const Vector& v);
+
+		void cout();
+	};
+
 }

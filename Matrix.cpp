@@ -91,3 +91,20 @@ void Matrix::cout() {
 	}
 	std::cout << "]" << std::endl;
 }
+
+mx::Vector::Vector(int size) :
+	Matrix(MatrixSize(1, size))
+{}
+
+mx::Vector::Vector(const Vector & v) :
+	Matrix(v)
+{}
+
+void mx::Vector::cout()
+{
+	std::cout << "Vector[size = (" << size.x << ", " << size.y << "): ( ";
+	for (int i = 0; i < size.y; i++) {
+		std::cout << matrix[i] << " ";
+	}
+	std::cout << ")]" << std::endl;
+}
